@@ -18,12 +18,12 @@ class Punto:
         return self.__y
     
     def mostrarDatos(self):
-        print("(x,y) = (",self.__x,',', self.__y,")")
+        print(" MM (x,y) = (",self.__x,',', self.__y,")")
         
-if __name__=='__main__':
+""" if __name__=='__main__':
     unPunto = Punto()
     otroPunto = Punto()
     unPunto.inicializar(3,4)
     otroPunto.inicializar(4,7)
     unPunto.mostrarDatos()
-    otroPunto.mostrarDatos()
+    otroPunto.mostrarDatos() """
