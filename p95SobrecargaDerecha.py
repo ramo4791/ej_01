@@ -1,0 +1,36 @@
+class Vector2D:
+    __x: float
+    __y: float
+
+    def __init__(self, x=-1, y=-1):
+        self.__x=x
+        self.__y=y
+
+    def __str__(self):
+        return '<x, y>=<{},{}>'.format(self.__x, self.__y)
+    
+    def getX(self):
+        return self.__x
+    
+    def getY(self):
+        return self.__y
+    
+    def __add__(self, otroVector):
+        return Vector2D(self.__x+otroVector.getX(), self.__y+otroVector.getY())
+        
+    #validacion de tipo de dato para la suma
+    """ def __add__(self, otroVector):
+        if type(self) == type(otroVector):
+            return Vector2D(self.__x+otroVector.getX(), self.__y+otroVector.getY())
+        else:
+            if type(otroVector)==int or type(otroVector)==float:
+                return Vector2D(self.__x+otroVector, self.__y)"""
+    
+    def __sub__(self, otroVector):
+        return Vector2D(self.__x-otroVector.getX(), self.__y-otroVector.getY())
+    
+    def __mul__(self, escalar):
+        return Vector2D(self.__x*escalar, self.__y*escalar)
+    
+    def __rmul__(self, escalar):
+        return Vector2D(self.__x*escalar, self.__y*escalar)
